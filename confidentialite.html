@@ -19,7 +19,7 @@
   <div class="encart">
     <strong>En bref :</strong> Mimic lit les messages des salons qu'il surveille pour repérer ceux qui
     pourraient poser problème. Il ne garde sur disque aucun contenu de message, ne vend rien et ne partage
-    rien avec des tiers. Les signalements restent sur votre serveur Discord.
+    rien avec des tiers (à part les prestataires techniques indiqués plus bas). Les signalements restent sur votre serveur Discord.
   </div>
 
   <h2>1. Qui est responsable</h2>
@@ -46,6 +46,7 @@
     <tr><td data-label="Donnée">Heure des signalements récents d'un membre</td><td data-label="Où">Mémoire vive uniquement</td><td data-label="Durée">24 heures, effacé au redémarrage</td></tr>
     <tr><td data-label="Donnée">Réglages du serveur : identifiant du serveur, du salon de signalement et des salons ignorés</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Tant que Mimic est sur le serveur, supprimé quand il le quitte</td></tr>
     <tr><td data-label="Donnée">Nombre de jours où deux membres d'un même serveur ont échangé, et date du dernier échange (leurs identifiants Discord, <em>jamais le contenu</em>)</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Supprimé après 90 jours sans échange entre eux, ou quand Mimic quitte le serveur</td></tr>
+    <tr><td data-label="Donnée">Membres autorisés sur le site de configuration pour un serveur (leurs identifiants Discord)</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Jusqu'à ce qu'un gestionnaire du serveur les retire, ou que Mimic quitte le serveur</td></tr>
   </table>
 
   <h2>4. Les signalements</h2>
@@ -55,18 +56,32 @@
   <p>Ce signalement est un message Discord publié <strong>sur le même serveur</strong>. Il reste sous le contrôle
   des administrateurs de ce serveur, qui peuvent le supprimer à tout moment. Mimic n'en garde pas de copie.</p>
 
-  <h2>5. Pourquoi : base légale</h2>
+  <h2>5. Le site de configuration</h2>
+  <p>Le site <a href="https://mimic.argannao.com">mimic.argannao.com</a> permet de régler Mimic. La connexion se fait
+  avec Discord : Mimic ne demande que votre identité (identifiant, pseudo et avatar), jamais vos messages,
+  la liste de vos serveurs ni votre adresse e-mail.</p>
+  <p>Cette identité est gardée dans un cookie de session signé (<code>mimic_session</code>), sur votre appareil,
+  jusqu'à la déconnexion et pendant 7 jours au plus. Ce cookie est indispensable au fonctionnement du site.
+  Il n'y a aucun cookie de mesure d'audience ni de publicité.</p>
+  <p>Les réglages d'un serveur sont accessibles aux membres qui ont la permission « Gérer le serveur »,
+  aux membres qu'ils ont autorisés sur le site, et à l'équipe Natural 20 pour l'assistance technique.
+  Le site n'affiche aucun message des membres. Quand des réglages sont modifiés, l'identifiant Discord
+  de la personne est noté dans les journaux techniques de la machine, effacés automatiquement au fil du temps.</p>
+
+  <h2>6. Pourquoi : base légale</h2>
   <p>Ces traitements reposent sur l'<strong>intérêt légitime</strong> (article 6.1.f du RGPD) : aider les
   modérateurs à garder le serveur sûr et agréable pour tous. Mimic ne prend aucune décision automatique :
   il ne supprime aucun message et ne sanctionne personne.</p>
 
-  <h2>6. Partage</h2>
-  <p>Mimic ne vend aucune donnée et ne la partage avec aucun tiers. Il n'envoie aucun message à un service
+  <h2>7. Partage</h2>
+  <p>Mimic ne vend aucune donnée et ne la partage avec aucun tiers, à part les prestataires techniques ci-dessous. Il n'envoie aucun message à un service
   d'intelligence artificielle externe. Les données transitent par Discord, qui applique sa propre
   <a href="https://discord.com/privacy">politique de confidentialité</a>.</p>
-  <p>Mimic est hébergé en France, sur une machine gérée par l'équipe Natural 20.</p>
+  <p>Mimic est hébergé en France, sur une machine gérée par l'équipe Natural 20. Le site de configuration
+  passe par <a href="https://www.cloudflare.com/fr-fr/privacypolicy/">Cloudflare</a>, qui gère le nom de domaine
+  et la connexion sécurisée : Cloudflare voit les visites du site, mais pas les messages Discord.</p>
 
-  <h2>7. Vos droits</h2>
+  <h2>8. Vos droits</h2>
   <p>Conformément au RGPD, vous pouvez demander l'accès à vos données, leur rectification ou leur suppression,
   et vous opposer à leur traitement. Pour cela, contactez <strong>argannao</strong> sur le serveur Discord
   où Mimic est installé. Si vous n'avez plus accès à ce serveur, ouvrez un ticket sur <a href="https://github.com/20-Naturel/Mimic-Legal/issues">GitHub</a> : il est public, indiquez seulement votre pseudo Discord et nous vous recontacterons.
@@ -76,11 +91,11 @@
   <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la
   <a href="https://www.cnil.fr/fr/plaintes">CNIL</a>.</p>
 
-  <h2>8. Âge minimum</h2>
+  <h2>9. Âge minimum</h2>
   <p>Mimic s'adresse aux utilisateurs de Discord et suit les âges minimums fixés par les
   <a href="https://discord.com/terms">conditions d'utilisation de Discord</a>.</p>
 
-  <h2>9. Modifications</h2>
+  <h2>10. Modifications</h2>
   <p>Cette politique peut évoluer, par exemple si Mimic gagne de nouvelles fonctionnalités. La date
   de mise à jour en haut de la page indique la dernière version. Les changements importants seront annoncés
   aux administrateurs des serveurs qui utilisent Mimic.</p>

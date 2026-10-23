@@ -18,7 +18,7 @@
 
   <div class="encart">
     <strong>In short:</strong> Mimic reads messages in the channels it monitors to spot ones that might be
-    a problem. It stores no message content on disk, sells nothing and shares nothing with third parties.
+    a problem. It stores no message content on disk, sells nothing and shares nothing with third parties (except the technical providers listed below).
     Reports stay on your Discord server.
   </div>
 
@@ -48,6 +48,7 @@
     <tr><td data-label="Data">Time of a member's recent reports</td><td data-label="Where">Memory only</td><td data-label="How long">24 hours, erased on restart</td></tr>
     <tr><td data-label="Data">Server settings: server ID, report channel ID and ignored channel IDs</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">As long as Mimic is on the server, deleted when it leaves</td></tr>
     <tr><td data-label="Data">Number of days on which two members of the same server talked, and the date of their last exchange (their Discord IDs, <em>never the content</em>)</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">Deleted after 90 days without an exchange between them, or when Mimic leaves the server</td></tr>
+    <tr><td data-label="Data">Members authorized on the settings website for a server (their Discord IDs)</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">Until a server manager removes them, or Mimic leaves the server</td></tr>
   </table>
 
   <h2>4. Reports</h2>
@@ -57,18 +58,32 @@
   <p>This report is a Discord message posted <strong>on the same server</strong>. It stays under the control of
   that server's administrators, who can delete it at any time. Mimic keeps no copy.</p>
 
-  <h2>5. Why: legal basis</h2>
+  <h2>5. The settings website</h2>
+  <p>The website <a href="https://mimic.argannao.com">mimic.argannao.com</a> lets you configure Mimic. You sign in
+  with Discord: Mimic only asks for your identity (ID, username and avatar), never your messages,
+  your server list or your email address.</p>
+  <p>This identity is kept in a signed session cookie (<code>mimic_session</code>) on your device,
+  until you sign out and for 7 days at most. This cookie is required for the site to work.
+  There are no analytics or advertising cookies.</p>
+  <p>A server's settings can be accessed by members with the "Manage Server" permission, by members they
+  authorized on the site, and by the Natural 20 team for technical support. The site shows no member messages.
+  When settings are changed, the person's Discord ID is written to the machine's technical logs, which are
+  deleted automatically over time.</p>
+
+  <h2>6. Why: legal basis</h2>
   <p>This processing is based on <strong>legitimate interest</strong> (Article 6(1)(f) GDPR): helping
   moderators keep the server safe and pleasant for everyone. Mimic makes no automated decisions:
   it deletes no messages and punishes no one.</p>
 
-  <h2>6. Sharing</h2>
-  <p>Mimic sells no data and shares none with third parties. It sends no messages to any external
+  <h2>7. Sharing</h2>
+  <p>Mimic sells no data and shares none with third parties, except the technical providers below. It sends no messages to any external
   artificial intelligence service. Data passes through Discord, which applies its own
   <a href="https://discord.com/privacy">privacy policy</a>.</p>
-  <p>Mimic is hosted in France, on a machine managed by the Natural 20 team.</p>
+  <p>Mimic is hosted in France, on a machine managed by the Natural 20 team. The settings website goes through
+  <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>, which manages the domain name and the secure
+  connection: Cloudflare sees visits to the site, but not Discord messages.</p>
 
-  <h2>7. Your rights</h2>
+  <h2>8. Your rights</h2>
   <p>Under the GDPR, you can ask to access, correct or delete your data, and object to its processing.
   To do so, contact <strong>argannao</strong> on the Discord server where Mimic is installed. If you no longer have access to that server, open a ticket on <a href="https://github.com/20-Naturel/Mimic-Legal/issues">GitHub</a>: it is public, so only give your Discord username and we will get back to you.
   We reply within one month.</p>
@@ -77,11 +92,11 @@
   <p>If you believe your rights are not respected, you can lodge a complaint with the French data
   protection authority, the <a href="https://www.cnil.fr/en/home">CNIL</a>, or your local authority.</p>
 
-  <h2>8. Minimum age</h2>
+  <h2>9. Minimum age</h2>
   <p>Mimic is meant for Discord users and follows the minimum ages set by
   <a href="https://discord.com/terms">Discord's Terms of Service</a>.</p>
 
-  <h2>9. Changes</h2>
+  <h2>10. Changes</h2>
   <p>This policy may change, for example when Mimic gains new features. The date at the top of the page
   shows the latest version. Significant changes will be announced to the administrators of servers using Mimic.</p>
 
