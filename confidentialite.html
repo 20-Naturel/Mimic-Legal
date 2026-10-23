@@ -44,8 +44,8 @@
     <tr><td data-label="Donnée">Texte simplifié des 20 derniers messages de chaque membre (détection du spam)</td><td data-label="Où">Mémoire vive uniquement</td><td data-label="Durée">Effacé au redémarrage du bot</td></tr>
     <tr><td data-label="Donnée">Informations sur les derniers messages de chaque salon : identifiants, heure, présence de rires ou d'emojis de colère. <em>Pas le texte.</em></td><td data-label="Où">Mémoire vive uniquement</td><td data-label="Durée">Effacé au redémarrage du bot</td></tr>
     <tr><td data-label="Donnée">Heure des signalements récents d'un membre</td><td data-label="Où">Mémoire vive uniquement</td><td data-label="Durée">24 heures, effacé au redémarrage</td></tr>
-    <tr><td data-label="Donnée">Réglages du serveur : identifiant du serveur, du salon de signalement et des salons ignorés</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Tant que Mimic est utilisé sur le serveur</td></tr>
-    <tr><td data-label="Donnée">Nombre d'échanges entre deux membres d'un même serveur (leurs identifiants Discord et un compteur, <em>jamais le contenu</em>)</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Supprimé après 90 jours sans échange entre eux</td></tr>
+    <tr><td data-label="Donnée">Réglages du serveur : identifiant du serveur, du salon de signalement et des salons ignorés</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Tant que Mimic est sur le serveur, supprimé quand il le quitte</td></tr>
+    <tr><td data-label="Donnée">Nombre de jours où deux membres d'un même serveur ont échangé, et date du dernier échange (leurs identifiants Discord, <em>jamais le contenu</em>)</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Supprimé après 90 jours sans échange entre eux, ou quand Mimic quitte le serveur</td></tr>
   </table>
 
   <h2>4. Les signalements</h2>
@@ -69,7 +69,8 @@
   <h2>7. Vos droits</h2>
   <p>Conformément au RGPD, vous pouvez demander l'accès à vos données, leur rectification ou leur suppression,
   et vous opposer à leur traitement. Pour cela, contactez <strong>argannao</strong> sur le serveur Discord
-  où Mimic est installé. Nous répondons dans un délai d'un mois.</p>
+  où Mimic est installé. Si vous n'avez plus accès à ce serveur, ouvrez un ticket sur <a href="https://github.com/20-Naturel/Mimic-Legal/issues">GitHub</a> : il est public, indiquez seulement votre pseudo Discord et nous vous recontacterons.
+  Nous répondons dans un délai d'un mois.</p>
   <p>Vous pouvez aussi demander aux administrateurs de votre serveur de supprimer un signalement vous concernant,
   ou d'exclure un salon de la surveillance.</p>
   <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la

@@ -46,8 +46,8 @@
     <tr><td data-label="Data">Simplified text of each member's last 20 messages (spam detection)</td><td data-label="Where">Memory only</td><td data-label="How long">Erased when the bot restarts</td></tr>
     <tr><td data-label="Data">Information about each channel's latest messages: IDs, time, whether they contain laughter or angry emojis. <em>Not the text.</em></td><td data-label="Where">Memory only</td><td data-label="How long">Erased when the bot restarts</td></tr>
     <tr><td data-label="Data">Time of a member's recent reports</td><td data-label="Where">Memory only</td><td data-label="How long">24 hours, erased on restart</td></tr>
-    <tr><td data-label="Data">Server settings: server ID, report channel ID and ignored channel IDs</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">As long as Mimic is used on the server</td></tr>
-    <tr><td data-label="Data">Number of exchanges between two members of the same server (their Discord IDs and a counter, <em>never the content</em>)</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">Deleted after 90 days without an exchange between them</td></tr>
+    <tr><td data-label="Data">Server settings: server ID, report channel ID and ignored channel IDs</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">As long as Mimic is on the server, deleted when it leaves</td></tr>
+    <tr><td data-label="Data">Number of days on which two members of the same server talked, and the date of their last exchange (their Discord IDs, <em>never the content</em>)</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">Deleted after 90 days without an exchange between them, or when Mimic leaves the server</td></tr>
   </table>
 
   <h2>4. Reports</h2>
@@ -70,7 +70,7 @@
 
   <h2>7. Your rights</h2>
   <p>Under the GDPR, you can ask to access, correct or delete your data, and object to its processing.
-  To do so, contact <strong>argannao</strong> on the Discord server where Mimic is installed.
+  To do so, contact <strong>argannao</strong> on the Discord server where Mimic is installed. If you no longer have access to that server, open a ticket on <a href="https://github.com/20-Naturel/Mimic-Legal/issues">GitHub</a>: it is public, so only give your Discord username and we will get back to you.
   We reply within one month.</p>
   <p>You can also ask your server's administrators to delete a report about you, or to exclude a channel
   from monitoring.</p>
