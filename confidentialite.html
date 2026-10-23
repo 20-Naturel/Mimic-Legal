@@ -18,7 +18,7 @@
 
   <div class="encart">
     <strong>En bref :</strong> Mimic lit les messages des salons qu'il surveille pour repérer ceux qui
-    pourraient poser problème. Il ne garde sur disque aucun contenu de message, ne vend rien et ne partage
+    pourraient poser problème. Il garde 90 jours un historique des alertes, avec un extrait du message signalé, visible seulement par les modérateurs. Il ne vend rien et ne partage
     rien avec des tiers (à part les prestataires techniques indiqués plus bas). Les signalements restent sur votre serveur Discord.
   </div>
 
@@ -33,7 +33,8 @@
   <ul>
     <li>des mots ou expressions surveillés (insultes, propos haineux, menaces, harcèlement) ;</li>
     <li>des liens suspects (liens raccourcis, faux sites, arnaques) ;</li>
-    <li>du spam (messages répétés, envoi massif, mentions de masse).</li>
+    <li>du spam (messages répétés, envoi massif, mentions de masse) ;</li>
+    <li>des sujets sensibles (violences sexuelles, pédocriminalité, inceste, zoophilie).</li>
   </ul>
   <p>Pour juger si une insulte relève de la plaisanterie, Mimic regarde aussi le contexte : les réactions
   au message, la réponse de la personne visée et l'ambiance des minutes précédentes dans le salon.</p>
@@ -47,6 +48,7 @@
     <tr><td data-label="Donnée">Réglages du serveur : identifiant du serveur, du salon de signalement et des salons ignorés</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Tant que Mimic est sur le serveur, supprimé quand il le quitte</td></tr>
     <tr><td data-label="Donnée">Nombre de jours où deux membres d'un même serveur ont échangé, et date du dernier échange (leurs identifiants Discord, <em>jamais le contenu</em>)</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Supprimé après 90 jours sans échange entre eux, ou quand Mimic quitte le serveur</td></tr>
     <tr><td data-label="Donnée">Membres autorisés sur le site de configuration pour un serveur (leurs identifiants Discord)</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Jusqu'à ce qu'un gestionnaire du serveur les retire, ou que Mimic quitte le serveur</td></tr>
+    <tr><td data-label="Donnée">Historique des alertes : date, salon, pseudo et identifiant de l'auteur, niveau, raisons, <em>extrait du message signalé</em> (1 000 caractères au maximum), statut et pseudo de la personne qui l'a traité</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">90 jours, puis supprimé automatiquement ; supprimé aussi quand Mimic quitte le serveur</td></tr>
   </table>
 
   <h2>4. Les signalements</h2>
@@ -54,7 +56,7 @@
   du serveur. Ce signalement contient le pseudo, l'identifiant et l'avatar de l'auteur, le salon, un extrait
   du message (1 000 caractères au maximum), la raison du signalement et les indices de contexte.</p>
   <p>Ce signalement est un message Discord publié <strong>sur le même serveur</strong>. Il reste sous le contrôle
-  des administrateurs de ce serveur, qui peuvent le supprimer à tout moment. Mimic n'en garde pas de copie.</p>
+  des administrateurs de ce serveur, qui peuvent le supprimer à tout moment. Mimic en garde une trace dans l'historique des alertes (voir le tableau ci-dessus), consultable sur le site par les personnes qui ont accès aux réglages du serveur, pendant 90 jours.</p>
 
   <h2>5. Le site de configuration</h2>
   <p>Le site <a href="https://mimic.argannao.com">mimic.argannao.com</a> permet de régler Mimic. La connexion se fait
@@ -65,7 +67,8 @@
   Il n'y a aucun cookie de mesure d'audience ni de publicité.</p>
   <p>Les réglages d'un serveur sont accessibles aux membres qui ont la permission « Gérer le serveur »,
   aux membres qu'ils ont autorisés sur le site, et à l'équipe Natural 20 pour l'assistance technique.
-  Le site n'affiche aucun message des membres. Quand des réglages sont modifiés, l'identifiant Discord
+  Le site affiche l'historique des alertes de ce serveur, extraits compris. Pour les sujets sensibles,
+  l'extrait est masqué par défaut. Il n'affiche aucun autre message. Quand des réglages sont modifiés, l'identifiant Discord
   de la personne est noté dans les journaux techniques de la machine, effacés automatiquement au fil du temps.</p>
 
   <h2>6. Pourquoi : base légale</h2>

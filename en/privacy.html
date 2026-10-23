@@ -18,7 +18,7 @@
 
   <div class="encart">
     <strong>In short:</strong> Mimic reads messages in the channels it monitors to spot ones that might be
-    a problem. It stores no message content on disk, sells nothing and shares nothing with third parties (except the technical providers listed below).
+    a problem. It keeps a 90-day history of alerts, with an excerpt of the flagged message, visible only to moderators. It sells nothing and shares nothing with third parties (except the technical providers listed below).
     Reports stay on your Discord server.
   </div>
 
@@ -35,7 +35,8 @@
   <ul>
     <li>watched words or phrases (insults, hate speech, threats, harassment);</li>
     <li>suspicious links (shortened links, fake sites, scams);</li>
-    <li>spam (repeated messages, flooding, mass mentions).</li>
+    <li>spam (repeated messages, flooding, mass mentions);</li>
+    <li>sensitive topics (sexual violence, child sexual abuse, incest, bestiality).</li>
   </ul>
   <p>To judge whether an insult is a joke, Mimic also looks at the context: reactions to the message,
   the reply from the person targeted, and the mood of the channel in the previous few minutes.</p>
@@ -49,6 +50,7 @@
     <tr><td data-label="Data">Server settings: server ID, report channel ID and ignored channel IDs</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">As long as Mimic is on the server, deleted when it leaves</td></tr>
     <tr><td data-label="Data">Number of days on which two members of the same server talked, and the date of their last exchange (their Discord IDs, <em>never the content</em>)</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">Deleted after 90 days without an exchange between them, or when Mimic leaves the server</td></tr>
     <tr><td data-label="Data">Members authorized on the settings website for a server (their Discord IDs)</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">Until a server manager removes them, or Mimic leaves the server</td></tr>
+    <tr><td data-label="Data">Alert history: date, channel, author's username and ID, level, reasons, <em>excerpt of the flagged message</em> (up to 1,000 characters), status and username of whoever handled it</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">90 days, then deleted automatically; also deleted when Mimic leaves the server</td></tr>
   </table>
 
   <h2>4. Reports</h2>
@@ -56,7 +58,7 @@
   The report contains the author's username, ID and avatar, the channel, an excerpt of the message
   (up to 1,000 characters), the reason and the context clues.</p>
   <p>This report is a Discord message posted <strong>on the same server</strong>. It stays under the control of
-  that server's administrators, who can delete it at any time. Mimic keeps no copy.</p>
+  that server's administrators, who can delete it at any time. Mimic keeps a record of it in the alert history (see the table above), available on the website for 90 days to people who can access the server's settings.</p>
 
   <h2>5. The settings website</h2>
   <p>The website <a href="https://mimic.argannao.com">mimic.argannao.com</a> lets you configure Mimic. You sign in
@@ -66,7 +68,7 @@
   until you sign out and for 7 days at most. This cookie is required for the site to work.
   There are no analytics or advertising cookies.</p>
   <p>A server's settings can be accessed by members with the "Manage Server" permission, by members they
-  authorized on the site, and by the Natural 20 team for technical support. The site shows no member messages.
+  authorized on the site, and by the Natural 20 team for technical support. The site shows this server's alert history, excerpts included; for sensitive topics, the excerpt is hidden by default. It shows no other messages.
   When settings are changed, the person's Discord ID is written to the machine's technical logs, which are
   deleted automatically over time.</p>
 
