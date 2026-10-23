@@ -1,0 +1,69 @@
+:root {
+  --bg: #f6f3ee;
+  --surface: #fffdf9;
+  --text: #2b2420;
+  --muted: #6b5f57;
+  --accent: #a0522d;
+  --border: #e3dbd1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1916;
+    --surface: #25211d;
+    --text: #ece5dc;
+    --muted: #b3a79b;
+    --accent: #e0995e;
+    --border: #3a332c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+header { margin-bottom: 32px; }
+.marque { font-weight: 600; color: var(--accent); text-decoration: none; letter-spacing: .02em; }
+.langue { float: right; font-size: 14px; color: var(--muted); }
+.langue a { color: inherit; }
+h1 { font-size: 30px; line-height: 1.25; margin: 8px 0 4px; }
+h2 { font-size: 20px; margin: 36px 0 8px; padding-top: 16px; border-top: 1px solid var(--border); }
+.date { color: var(--muted); font-size: 14px; margin: 0; }
+a { color: var(--accent); }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+th { font-weight: 600; }
+.encart {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 16px 0;
+}
+.cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+.carte {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  color: var(--text);
+  text-decoration: none;
+}
+.carte:hover { border-color: var(--accent); }
+.carte strong { display: block; color: var(--accent); margin-bottom: 4px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+@media (max-width: 520px) {
+  table, tbody, tr, td { display: block; }
+  tr.entete { display: none; }
+  tr { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  td { border: 0; padding: 2px 0; }
+  td:first-child { font-weight: 600; }
+  td + td::before { content: attr(data-label) " : "; color: var(--muted); }
+}

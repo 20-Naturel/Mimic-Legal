@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · Mimic</title>
+<meta name="description" content="Privacy Policy for Mimic, a Discord bot by the Natural 20 team.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+  <header>
+    <span class="langue"><a href="../confidentialite.html">Français</a></span>
+    <a class="marque" href="./">🎲 Mimic</a>
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: October 23, 2026</p>
+  </header>
+
+  <div class="encart">
+    <strong>In short:</strong> Mimic reads messages in the channels it monitors to spot ones that might be
+    a problem. It stores no message content on disk, sells nothing and shares nothing with third parties.
+    Reports stay on your Discord server.
+  </div>
+
+  <p>This English version is provided for convenience. The <a href="../confidentialite.html">French version</a> prevails.</p>
+
+  <h2>1. Who is responsible</h2>
+  <p>Mimic is developed and run by the <strong>Natural 20</strong> team, which is the data controller for
+  the processing described here. For any question or request, contact <strong>argannao</strong> on Discord.</p>
+
+  <h2>2. What Mimic reads</h2>
+  <p>On servers where it is installed and monitoring is enabled, Mimic receives messages posted in the channels
+  it can see, except those the administrators chose to ignore. It analyzes their text when they are posted or
+  edited, to spot:</p>
+  <ul>
+    <li>watched words or phrases (insults, hate speech, threats, harassment);</li>
+    <li>suspicious links (shortened links, fake sites, scams);</li>
+    <li>spam (repeated messages, flooding, mass mentions).</li>
+  </ul>
+  <p>To judge whether an insult is a joke, Mimic also looks at the context: reactions to the message,
+  the reply from the person targeted, and the mood of the channel in the previous few minutes.</p>
+
+  <h2>3. What Mimic keeps</h2>
+  <table>
+    <tr class="entete"><th>Data</th><th>Where</th><th>How long</th></tr>
+    <tr><td data-label="Data">Simplified text of each member's last 20 messages (spam detection)</td><td data-label="Where">Memory only</td><td data-label="How long">Erased when the bot restarts</td></tr>
+    <tr><td data-label="Data">Information about each channel's latest messages: IDs, time, whether they contain laughter or angry emojis. <em>Not the text.</em></td><td data-label="Where">Memory only</td><td data-label="How long">Erased when the bot restarts</td></tr>
+    <tr><td data-label="Data">Time of a member's recent reports</td><td data-label="Where">Memory only</td><td data-label="How long">24 hours, erased on restart</td></tr>
+    <tr><td data-label="Data">Server settings: server ID, report channel ID and ignored channel IDs</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">As long as Mimic is used on the server</td></tr>
+    <tr><td data-label="Data">Number of exchanges between two members of the same server (their Discord IDs and a counter, <em>never the content</em>)</td><td data-label="Where">File on the machine hosting Mimic</td><td data-label="How long">Deleted after 90 days without an exchange between them</td></tr>
+  </table>
+
+  <h2>4. Reports</h2>
+  <p>When a message is flagged, Mimic posts a report in a channel chosen by the server's administrators.
+  The report contains the author's username, ID and avatar, the channel, an excerpt of the message
+  (up to 1,000 characters), the reason and the context clues.</p>
+  <p>This report is a Discord message posted <strong>on the same server</strong>. It stays under the control of
+  that server's administrators, who can delete it at any time. Mimic keeps no copy.</p>
+
+  <h2>5. Why: legal basis</h2>
+  <p>This processing is based on <strong>legitimate interest</strong> (Article 6(1)(f) GDPR): helping
+  moderators keep the server safe and pleasant for everyone. Mimic makes no automated decisions:
+  it deletes no messages and punishes no one.</p>
+
+  <h2>6. Sharing</h2>
+  <p>Mimic sells no data and shares none with third parties. It sends no messages to any external
+  artificial intelligence service. Data passes through Discord, which applies its own
+  <a href="https://discord.com/privacy">privacy policy</a>.</p>
+  <p>Mimic is hosted in France, on a machine managed by the Natural 20 team.</p>
+
+  <h2>7. Your rights</h2>
+  <p>Under the GDPR, you can ask to access, correct or delete your data, and object to its processing.
+  To do so, contact <strong>argannao</strong> on Discord and name the server concerned.
+  We reply within one month.</p>
+  <p>You can also ask your server's administrators to delete a report about you, or to exclude a channel
+  from monitoring.</p>
+  <p>If you believe your rights are not respected, you can lodge a complaint with the French data
+  protection authority, the <a href="https://www.cnil.fr/en/home">CNIL</a>, or your local authority.</p>
+
+  <h2>8. Minimum age</h2>
+  <p>Mimic is meant for Discord users and follows the minimum ages set by
+  <a href="https://discord.com/terms">Discord's Terms of Service</a>.</p>
+
+  <h2>9. Changes</h2>
+  <p>This policy may change, for example when Mimic gains new features. The date at the top of the page
+  shows the latest version. Significant changes will be announced to the administrators of servers using Mimic.</p>
+
+  <footer><a href="terms.html">Terms of Service</a> · <a href="./">Home</a></footer>
+</main>
+</body>
+</html>

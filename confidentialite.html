@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidentialité · Mimic</title>
+<meta name="description" content="Politique de confidentialité de Mimic, bot Discord de l'équipe Natural 20.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <span class="langue"><a href="en/privacy.html">English</a></span>
+    <a class="marque" href="./">🎲 Mimic</a>
+    <h1>Politique de confidentialité</h1>
+    <p class="date">Dernière mise à jour : 23 octobre 2026</p>
+  </header>
+
+  <div class="encart">
+    <strong>En bref :</strong> Mimic lit les messages des salons qu'il surveille pour repérer ceux qui
+    pourraient poser problème. Il ne garde sur disque aucun contenu de message, ne vend rien et ne partage
+    rien avec des tiers. Les signalements restent sur votre serveur Discord.
+  </div>
+
+  <h2>1. Qui est responsable</h2>
+  <p>Mimic est développé et exploité par l'équipe <strong>Natural 20</strong>, responsable du traitement
+  des données décrites ici. Pour toute question ou demande, contactez <strong>argannao</strong> sur Discord.</p>
+
+  <h2>2. Ce que Mimic lit</h2>
+  <p>Sur les serveurs où il est installé et où la surveillance est activée, Mimic reçoit les messages publiés
+  dans les salons qu'il peut voir, sauf ceux que les administrateurs ont choisi d'ignorer. Il analyse leur texte
+  au moment où ils sont publiés ou modifiés, pour repérer :</p>
+  <ul>
+    <li>des mots ou expressions surveillés (insultes, propos haineux, menaces, harcèlement) ;</li>
+    <li>des liens suspects (liens raccourcis, faux sites, arnaques) ;</li>
+    <li>du spam (messages répétés, envoi massif, mentions de masse).</li>
+  </ul>
+  <p>Pour juger si une insulte relève de la plaisanterie, Mimic regarde aussi le contexte : les réactions
+  au message, la réponse de la personne visée et l'ambiance des minutes précédentes dans le salon.</p>
+
+  <h2>3. Ce que Mimic conserve</h2>
+  <table>
+    <tr class="entete"><th>Donnée</th><th>Où</th><th>Combien de temps</th></tr>
+    <tr><td data-label="Donnée">Texte simplifié des 20 derniers messages de chaque membre (détection du spam)</td><td data-label="Où">Mémoire vive uniquement</td><td data-label="Durée">Effacé au redémarrage du bot</td></tr>
+    <tr><td data-label="Donnée">Informations sur les derniers messages de chaque salon : identifiants, heure, présence de rires ou d'emojis de colère. <em>Pas le texte.</em></td><td data-label="Où">Mémoire vive uniquement</td><td data-label="Durée">Effacé au redémarrage du bot</td></tr>
+    <tr><td data-label="Donnée">Heure des signalements récents d'un membre</td><td data-label="Où">Mémoire vive uniquement</td><td data-label="Durée">24 heures, effacé au redémarrage</td></tr>
+    <tr><td data-label="Donnée">Réglages du serveur : identifiant du serveur, du salon de signalement et des salons ignorés</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Tant que Mimic est utilisé sur le serveur</td></tr>
+    <tr><td data-label="Donnée">Nombre d'échanges entre deux membres d'un même serveur (leurs identifiants Discord et un compteur, <em>jamais le contenu</em>)</td><td data-label="Où">Fichier sur la machine qui héberge Mimic</td><td data-label="Durée">Supprimé après 90 jours sans échange entre eux</td></tr>
+  </table>
+
+  <h2>4. Les signalements</h2>
+  <p>Quand un message est repéré, Mimic publie un signalement dans un salon choisi par les administrateurs
+  du serveur. Ce signalement contient le pseudo, l'identifiant et l'avatar de l'auteur, le salon, un extrait
+  du message (1 000 caractères au maximum), la raison du signalement et les indices de contexte.</p>
+  <p>Ce signalement est un message Discord publié <strong>sur le même serveur</strong>. Il reste sous le contrôle
+  des administrateurs de ce serveur, qui peuvent le supprimer à tout moment. Mimic n'en garde pas de copie.</p>
+
+  <h2>5. Pourquoi : base légale</h2>
+  <p>Ces traitements reposent sur l'<strong>intérêt légitime</strong> (article 6.1.f du RGPD) : aider les
+  modérateurs à garder le serveur sûr et agréable pour tous. Mimic ne prend aucune décision automatique :
+  il ne supprime aucun message et ne sanctionne personne.</p>
+
+  <h2>6. Partage</h2>
+  <p>Mimic ne vend aucune donnée et ne la partage avec aucun tiers. Il n'envoie aucun message à un service
+  d'intelligence artificielle externe. Les données transitent par Discord, qui applique sa propre
+  <a href="https://discord.com/privacy">politique de confidentialité</a>.</p>
+  <p>Mimic est hébergé en France, sur une machine gérée par l'équipe Natural 20.</p>
+
+  <h2>7. Vos droits</h2>
+  <p>Conformément au RGPD, vous pouvez demander l'accès à vos données, leur rectification ou leur suppression,
+  et vous opposer à leur traitement. Pour cela, contactez <strong>argannao</strong> sur Discord en indiquant
+  le serveur concerné. Nous répondons dans un délai d'un mois.</p>
+  <p>Vous pouvez aussi demander aux administrateurs de votre serveur de supprimer un signalement vous concernant,
+  ou d'exclure un salon de la surveillance.</p>
+  <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la
+  <a href="https://www.cnil.fr/fr/plaintes">CNIL</a>.</p>
+
+  <h2>8. Âge minimum</h2>
+  <p>Mimic s'adresse aux utilisateurs de Discord et suit les âges minimums fixés par les
+  <a href="https://discord.com/terms">conditions d'utilisation de Discord</a>.</p>
+
+  <h2>9. Modifications</h2>
+  <p>Cette politique peut évoluer, par exemple si Mimic gagne de nouvelles fonctionnalités. La date
+  de mise à jour en haut de la page indique la dernière version. Les changements importants seront annoncés
+  aux administrateurs des serveurs qui utilisent Mimic.</p>
+
+  <footer><a href="conditions.html">Conditions d'utilisation</a> · <a href="./">Accueil</a></footer>
+</main>
+</body>
+</html>
